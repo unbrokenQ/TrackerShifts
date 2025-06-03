@@ -1,5 +1,5 @@
 import { db } from "@/db";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { toast } from "sonner";
 import TableShifts from "./TableShifts";
 import { Button } from "./ui/button";
