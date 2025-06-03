@@ -72,7 +72,12 @@ export default function TableShifts() {
 	};
 
 	useEffect(() => {
-		getShifts();
+		const interval = setInterval(() => {
+			getShifts();
+		}, 500);
+		return () => {
+			clearInterval(interval);
+		};
 	}, []);
 	return (
 		<div className="bg-black overflow-hidden rounded-md border mt-2">
